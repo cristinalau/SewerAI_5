@@ -1,0 +1,226 @@
+<audit_trail ecid="dd3d78c4-5bb2-46a2-8370-2d629b401191-01082653"  flowId="960149"  flowCorrelationId="0000PpcttO81Fg7LzIh8iW1dngeG00000m"  activeInstances="0"  date="2026-04-07 11:05:00.937 MDT"  lastUpdatedDate="2026-04-07 11:05:12.394 MDT"  elapsedTime="11457">
+    <entry instanceId="2291114" date="2026-04-07 11:05:00.937 MDT" lastUpdatedDate="2026-04-07 11:05:00.937 MDT" elapsedTime="0" timestamp="1775581500937" state="18" actionType="operation" actionName="receive" subType="binding.jca" type="service">
+        <entityName>ReadWOTSewerAIData</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291115" parentInstanceId="2291114" faultId="620020" date="2026-04-07 11:05:00.939 MDT" lastUpdatedDate="2026-04-07 11:05:12.394 MDT" elapsedTime="11455" timestamp="1775581500939" state="2578" actionType="operation" actionName="receive" subType="bpel" type="component">
+        <entityName>SendWOTChanges</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR,RECOVERED</status>
+    </entry>
+    <entry instanceId="2291116" parentInstanceId="2291115" date="2026-04-07 11:05:00.951 MDT" lastUpdatedDate="2026-04-07 11:05:01.031 MDT" elapsedTime="80" timestamp="1775581500951" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportWOTUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291117" parentInstanceId="2291115" date="2026-04-07 11:05:01.034 MDT" lastUpdatedDate="2026-04-07 11:05:01.242 MDT" elapsedTime="208" timestamp="1775581501034" state="18" actionType="operation" actionName="putProjects" subType="binding.rest" type="reference">
+        <entityName>SewerAIProjects</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291118" parentInstanceId="2291115" date="2026-04-07 11:05:01.244 MDT" lastUpdatedDate="2026-04-07 11:05:01.260 MDT" elapsedTime="16" timestamp="1775581501244" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateWOTSewerAIData</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291119" parentInstanceId="2291115" date="2026-04-07 11:05:01.261 MDT" lastUpdatedDate="2026-04-07 11:05:01.277 MDT" elapsedTime="16" timestamp="1775581501261" state="18" actionType="operation" actionName="ReadCRInspectSelect" subType="binding.jca" type="reference">
+        <entityName>ReadCRInspect</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291120" parentInstanceId="2291115" date="2026-04-07 11:05:01.281 MDT" lastUpdatedDate="2026-04-07 11:05:01.285 MDT" elapsedTime="4" timestamp="1775581501281" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291121" parentInstanceId="2291115" date="2026-04-07 11:05:01.298 MDT" lastUpdatedDate="2026-04-07 11:05:06.822 MDT" elapsedTime="5524" timestamp="1775581501298" state="18" actionType="operation" actionName="putVideosMACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291125" parentInstanceId="2291115" date="2026-04-07 11:05:06.824 MDT" lastUpdatedDate="2026-04-07 11:05:06.840 MDT" elapsedTime="16" timestamp="1775581506824" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291126" parentInstanceId="2291115" date="2026-04-07 11:05:06.843 MDT" lastUpdatedDate="2026-04-07 11:05:06.848 MDT" elapsedTime="5" timestamp="1775581506843" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291127" parentInstanceId="2291115" date="2026-04-07 11:05:06.858 MDT" lastUpdatedDate="2026-04-07 11:05:06.861 MDT" elapsedTime="3" timestamp="1775581506858" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291128" parentInstanceId="2291115" date="2026-04-07 11:05:06.866 MDT" lastUpdatedDate="2026-04-07 11:05:10.393 MDT" elapsedTime="3527" timestamp="1775581506866" state="18" actionType="operation" actionName="putVideosPACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291129" parentInstanceId="2291115" date="2026-04-07 11:05:10.407 MDT" lastUpdatedDate="2026-04-07 11:05:10.409 MDT" elapsedTime="2" timestamp="1775581510407" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291130" parentInstanceId="2291115" date="2026-04-07 11:05:10.411 MDT" lastUpdatedDate="2026-04-07 11:05:10.414 MDT" elapsedTime="3" timestamp="1775581510411" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291131" parentInstanceId="2291115" date="2026-04-07 11:05:10.418 MDT" lastUpdatedDate="2026-04-07 11:05:11.066 MDT" elapsedTime="648" timestamp="1775581510418" state="18" actionType="operation" actionName="putVideosPACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291132" parentInstanceId="2291115" date="2026-04-07 11:05:11.067 MDT" lastUpdatedDate="2026-04-07 11:05:11.070 MDT" elapsedTime="3" timestamp="1775581511067" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291133" parentInstanceId="2291115" date="2026-04-07 11:05:11.072 MDT" lastUpdatedDate="2026-04-07 11:05:11.075 MDT" elapsedTime="3" timestamp="1775581511072" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291134" parentInstanceId="2291115" date="2026-04-07 11:05:11.078 MDT" lastUpdatedDate="2026-04-07 11:05:11.303 MDT" elapsedTime="225" timestamp="1775581511078" state="18" actionType="operation" actionName="putVideosPACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291135" parentInstanceId="2291115" date="2026-04-07 11:05:11.304 MDT" lastUpdatedDate="2026-04-07 11:05:11.306 MDT" elapsedTime="2" timestamp="1775581511304" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291136" parentInstanceId="2291115" date="2026-04-07 11:05:11.307 MDT" lastUpdatedDate="2026-04-07 11:05:11.310 MDT" elapsedTime="3" timestamp="1775581511307" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291137" parentInstanceId="2291115" date="2026-04-07 11:05:11.314 MDT" lastUpdatedDate="2026-04-07 11:05:11.933 MDT" elapsedTime="619" timestamp="1775581511314" state="18" actionType="operation" actionName="putVideosLACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291138" parentInstanceId="2291115" date="2026-04-07 11:05:11.934 MDT" lastUpdatedDate="2026-04-07 11:05:11.935 MDT" elapsedTime="1" timestamp="1775581511934" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291139" parentInstanceId="2291115" date="2026-04-07 11:05:11.937 MDT" lastUpdatedDate="2026-04-07 11:05:11.940 MDT" elapsedTime="3" timestamp="1775581511937" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291140" parentInstanceId="2291115" date="2026-04-07 11:05:11.944 MDT" lastUpdatedDate="2026-04-07 11:05:12.170 MDT" elapsedTime="226" timestamp="1775581511944" state="18" actionType="operation" actionName="putVideosLACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291141" parentInstanceId="2291115" date="2026-04-07 11:05:12.182 MDT" lastUpdatedDate="2026-04-07 11:05:12.183 MDT" elapsedTime="1" timestamp="1775581512182" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291142" parentInstanceId="2291115" date="2026-04-07 11:05:12.185 MDT" lastUpdatedDate="2026-04-07 11:05:12.188 MDT" elapsedTime="3" timestamp="1775581512185" state="18" actionType="operation" actionName="Write" subType="binding.jca" type="reference">
+        <entityName>ExportInspectUpdate_sp</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291143" parentInstanceId="2291115" date="2026-04-07 11:05:12.194 MDT" lastUpdatedDate="2026-04-07 11:05:12.387 MDT" elapsedTime="193" timestamp="1775581512194" state="18" actionType="operation" actionName="putVideosMACP" subType="binding.rest" type="reference">
+        <entityName>SewerAIVideos</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+    <entry instanceId="2291144" parentInstanceId="2291115" date="2026-04-07 11:05:12.388 MDT" lastUpdatedDate="2026-04-07 11:05:12.390 MDT" elapsedTime="2" timestamp="1775581512388" state="18" actionType="operation" actionName="update" subType="binding.jca" type="reference">
+        <entityName>UpdateCRInspectStatus</entityName>
+        <compositeInstanceId>960151</compositeInstanceId>
+        <compositeName>IvaraToSewerAI</compositeName>
+        <compositeDN>Ivara12c/IvaraToSewerAI!1.0</compositeDN>
+        <applicationName>Ivara12c</applicationName>
+        <status>COMPLETED,CLEAR</status>
+    </entry>
+</audit_trail>
