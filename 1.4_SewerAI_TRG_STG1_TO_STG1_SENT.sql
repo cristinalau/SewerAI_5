@@ -24,6 +24,7 @@ COMPOUND TRIGGER
     v_old := TRIM(UPPER(:OLD.FEED_STATUS));
     v_new := TRIM(UPPER(:NEW.FEED_STATUS));
 
+    -- Only treat SENT as a true success
     IF v_new = 'SENT'
        AND ( :OLD.FEED_STATUS IS NULL OR v_old <> 'SENT' ) THEN
 
@@ -42,7 +43,6 @@ COMPOUND TRIGGER
     WHILE v_key IS NOT NULL LOOP
       DELETE FROM CUSTOMERDATA.EPSEWERAI_WOT_STG1
        WHERE TASK_UUID = HEXTORAW(v_key);
-
       v_key := g_to_delete.NEXT(v_key);
     END LOOP;
   END AFTER STATEMENT;
