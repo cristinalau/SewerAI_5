@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?><audit_trail flowId="960208" cid="bpel:2291649">
+<event date="2026-04-08T11:44:55.020-06:00" cat="2" type="2" n="0" sid="0">
+      <message>New instance of BPEL process "1.0" initiated (# "SendWOTChanges").</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="0" label="process" type="2" n="1" sid="BpPrc0.1">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="BpPrc0.1" label="tryBlock of process (2)" type="2" n="2" sid="BpTry0.2">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="BpTry0.2" label="Main (74)" type="2" n="3" sid="BpSeq0.3">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" wikey="2291649-BpRcv0-BpSeq0.3-1" cat="2" label="receiveFromDB" state="5" type="2" n="4" sid="BpSeq0.3">
+      <message>Received "receive" call from partner "ReadWOTSewerAIData"</message>
+      <details>
+&lt;inputVariableWOT&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;8RkTYWjpekSElU5szPKJdw==&lt;/taskUuid&gt;&lt;wotasktitle&gt;10.1 Control/Instrumentation Systems&lt;/wotasktitle&gt;&lt;plndcompdateDttm&gt;2026-08-27T17:19:51.000-06:00&lt;/plndcompdateDttm&gt;&lt;plndstrtdateDttm&gt;2026-06-30T17:19:51.000-06:00&lt;/plndstrtdateDttm&gt;&lt;workclassifiOi&gt;211&lt;/workclassifiOi&gt;&lt;feedStatus&gt;UPDATED&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/inputVariableWOT&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="BpSeq0.3" label="EncodeAndInvoke (77)" type="2" n="5" sid="BpScp0.4">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="BpScp0.4" label="tryBlock of scope EncodeAndInvoke (77)" type="2" n="6" sid="BpTry1.5">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.020-06:00" cat="1" psid="BpTry1.5" label="sequence (98)" type="2" n="7" sid="BpSeq2.6">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.021-06:00" wikey="2291649-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="8" sid="BpSeq2.6">
+      <message>EncodeAndSetOpaquePayload (SewerAI payload; date mappings applied) started.</message>
+   </event>
+   <event date="2026-04-08T11:44:55.021-06:00" wikey="2291649-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="9" sid="BpSeq2.6">
+      <message>Resolved projectSid=f1191361-68e9-7a44-8495-4e6cccf28977</message>
+   </event>
+   <event date="2026-04-08T11:44:55.021-06:00" wikey="2291649-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="10" sid="BpSeq2.6">
+      <message>Opaque payload generated and Base64 encoded.</message>
+   </event>
+   <event date="2026-04-08T11:44:55.021-06:00" wikey="2291649-BxExe1-BpSeq2.6-1" cat="2" label="EncodeAndSetOpaquePayload" state="5" type="2" n="11" sid="BpSeq2.6">
+      <message>bpelx:exec executed</message>
+   </event>
+   <event date="2026-04-08T11:44:55.021-06:00" wikey="2291649-BpInv1-BpSeq2.6-2" cat="2" label="writeOpaque" state="1" type="2" n="12" sid="BpSeq2.6">
+      <message>Started invocation of operation "Write" on partner "ExportWOTUpdate_sp".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpInv1-BpSeq2.6-2" partnerWSDL="" cat="2" label="writeOpaque" state="5" type="2" n="13" sid="BpSeq2.6">
+      <message>Invoked 1-way operation "Write" on partner "ExportWOTUpdate_sp".</message>
+      <details>
+&lt;fileWriteRequest&gt;&lt;part name="opaque" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;opaqueElement xmlns="http://xmlns.oracle.com/pcbpel/adapter/opaque/"&gt;eyJzaWQiOiJmMTE5MTM2MS02OGU5LTdhNDQtODQ5NS00ZTZjY2NmMjg5NzciLCJhY2NvdW50Ijp7InNpZCI6ImEyZWRjM2E3LTgyYjktNGE5Zi1iYTYxLTA5YTU4NTkwZGZiMCJ9LCJuYW1lIjoiMTAuMSBDb250cm9sL0luc3RydW1lbnRhdGlvbiBTeXN0ZW1zIiwic3RhdHVzIjoiYWN0aXZlIiwiZ29hbF9zdGF0ZSI6ImF1dG9jb2RlX2NvbXBsZXRlIiwibm90ZXMiOiJDcmVhdGVkIGJ5IEFQSSB0ZXN0IHNjcmlwdCIsInBhY3BfcHJvamVjdF9zcGVjIjp7InNpZCI6ImY2NzY5ZTcyLTQxMWYtNDA0My05NWU3LTgwNWRkZWYxMjQ5ZiJ9LCJsYWNwX3Byb2plY3Rfc3BlYyI6eyJzaWQiOiI5MjBkZDM2OC1hMjc2LTRiNzMtYjYyOS03MjFjYWRmODQyYzQifSwibWFjcF9wcm9qZWN0X3NwZWMiOnsic2lkIjoiNDE5YTQyYTQtYWUyYy00MzViLTkzNjAtYzk5MzM0Y2NkNTY3In0sInJ1bl9hdXRvY29kZV9vbl91cGxvYWQiOmZhbHNlLCJkYXRlX3N0YXJ0ZWQiOiIyMDI2LTA2LTMwVDE3OjE5OjUxLTA2OjAwIiwiZXN0aW1hdGVkX2NvbXBsZXRpb25fZGF0ZSI6IjIwMjYtMDgtMjdUMTc6MTk6NTEtMDY6MDAiLCJkYXRlX2R1ZSI6IjIwMjYtMDgtMjdUMTc6MTk6NTEtMDY6MDAiLCJkYXRlX2ZpbmlzaGVkIjpudWxsLCJwYWNwX2V4cGVjdGVkX2luc3BlY3Rpb25fY291bnQiOjAsInBhY3BfZXhwZWN0ZWRfbGluZWFyX2ZlZXQiOjAsImxhY3BfZXhwZWN0ZWRfaW5zcGVjdGlvbl9jb3VudCI6MCwibGFjcF9leHBlY3RlZF9saW5lYXJfZmVldCI6MCwibWFjcF9leHBlY3RlZF9pbnNwZWN0aW9uX2NvdW50IjowLCJtYWNwX2V4cGVjdGVkX2xpbmVhcl9mZWV0IjowfQ==&lt;/opaqueElement&gt;&lt;/part&gt;&lt;/fileWriteRequest&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss1-BpSeq2.6-3" cat="2" to="vHeadersJson" label="BuildHeadersJson" state="1" type="1" n="14" sid="BpSeq2.6">
+      <message>Updated variable "vHeadersJson"</message>
+      <details>
+&lt;vHeadersJson&gt;&lt;vHeadersJson xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;{"Authorization":"X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d","Content-Type":"application/json"}&lt;/vHeadersJson&gt;&lt;/vHeadersJson&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss1-BpSeq2.6-3" cat="2" label="BuildHeadersJson" state="5" type="1" n="15" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss2-BpSeq2.6-4" cat="2" to="vAuth" label="SetAuth" state="1" type="1" n="16" sid="BpSeq2.6">
+      <message>Updated variable "vAuth"</message>
+      <details>
+&lt;vAuth&gt;&lt;vAuth&gt;X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d&lt;/vAuth&gt;&lt;/vAuth&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss2-BpSeq2.6-4" cat="2" to="vCT" label="SetAuth" state="1" type="1" n="17" sid="BpSeq2.6">
+      <message>Updated variable "vCT"</message>
+      <details>
+&lt;vCT&gt;&lt;vCT&gt;application/json&lt;/vCT&gt;&lt;/vCT&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss2-BpSeq2.6-4" cat="2" to="vAccept" label="SetAuth" state="1" type="1" n="18" sid="BpSeq2.6">
+      <message>Updated variable "vAccept"</message>
+      <details>
+&lt;vAccept&gt;&lt;vAccept xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;application/json&lt;/vAccept&gt;&lt;/vAccept&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss2-BpSeq2.6-4" cat="2" to="vRespType" label="SetAuth" state="1" type="1" n="19" sid="BpSeq2.6">
+      <message>Updated variable "vRespType"</message>
+      <details>
+&lt;vRespType&gt;&lt;vRespType xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;json&lt;/vRespType&gt;&lt;/vRespType&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss2-BpSeq2.6-4" cat="2" label="SetAuth" state="5" type="1" n="20" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="21" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid/&gt;&lt;/account&gt;&lt;name/&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="22" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name/&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="23" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="24" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="25" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="26" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="27" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="28" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.026-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="29" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="30" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="31" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="32" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="33" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="34" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="35" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="36" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="37" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="38" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="39" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="40" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet&gt;0&lt;/macp_expected_linear_feet&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss3-BpSeq2.6-5" cat="2" label="PutProjectsRequest" state="5" type="1" n="41" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" cat="1" psid="BpSeq2.6" label="PutProjectsScope (410)" type="2" n="42" sid="BpScp1.7">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" cat="1" psid="BpScp1.7" label="tryBlock of scope PutProjectsScope (410)" type="2" n="43" sid="BpTry2.8">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" cat="1" psid="BpTry2.8" label="sequence (431)" type="2" n="44" sid="BpSeq4.9">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss5-BpSeq4.9-1" cat="2" to="vPutProjectsStatusCode" label="InitPutProjectsHttpState" state="1" type="1" n="45" sid="BpSeq4.9">
+      <message>Updated variable "vPutProjectsStatusCode"</message>
+      <details>
+&lt;vPutProjectsStatusCode&gt;&lt;vPutProjectsStatusCode xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;/vPutProjectsStatusCode&gt;&lt;/vPutProjectsStatusCode&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss5-BpSeq4.9-1" cat="2" to="vPutProjectsFault" label="InitPutProjectsHttpState" state="1" type="1" n="46" sid="BpSeq4.9">
+      <message>Updated variable "vPutProjectsFault"</message>
+      <details>
+&lt;vPutProjectsFault&gt;&lt;vPutProjectsFault xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;/vPutProjectsFault&gt;&lt;/vPutProjectsFault&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpAss5-BpSeq4.9-1" cat="2" label="InitPutProjectsHttpState" state="5" type="1" n="47" sid="BpSeq4.9">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="48" sid="BpSeq4.9">
+      <message>Started invocation of operation "putProjects" on partner "SewerAIProjects".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="49" sid="BpSeq4.9">
+      <message>Sending property "rest.binding.http.Authorization", value is "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="50" sid="BpSeq4.9">
+      <message>Sending property "rest.binding.responseType", value is "json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="51" sid="BpSeq4.9">
+      <message>Sending property "rest.binding.http.Accept", value is "application/json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.027-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="52" sid="BpSeq4.9">
+      <message>Sending property "rest.binding.http.Content-Type", value is "application/json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.415-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" cat="2" label="InvokePutProjects" state="1" type="2" n="53" sid="BpSeq4.9">
+      <message>Received property "rest.binding.http.statusCode", value is "200".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.415-06:00" wikey="2291649-BpInv2-BpSeq4.9-2" partnerWSDL="" cat="2" label="InvokePutProjects" state="5" type="2" n="54" sid="BpSeq4.9">
+      <message>Invoked 2-way operation "putProjects" on partner "SewerAIProjects".</message>
+      <details>&lt;messages&gt;
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;10.1 Control/Instrumentation Systems&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-06-30T17:19:51-06:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-08-27T17:19:51-06:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-08-27T17:19:51-06:00&lt;/date_due&gt;&lt;date_finished&gt;2026-08-27T17:19:51-06:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet&gt;0&lt;/macp_expected_linear_feet&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;
+&lt;vPutProjectsResp&gt;&lt;part name="Empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;empty xmlns="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"/&gt;&lt;/part&gt;&lt;/vPutProjectsResp&gt;&lt;/messages&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" psid="BpSeq4.9" label="CheckPutProjectsStatus (454)" type="2" n="55" sid="BpIf0.10">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpIf0_Nd-BpIf0.10-1" cat="2" label="CheckPutProjectsStatus" state="5" type="2" n="56" sid="BpIf0.10">
+      <message>If is selected. Condition is "starts-with(normalize-space($vPutProjectsStatusCode),'2')".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" psid="BpIf0.10" label="sequence (456)" type="2" n="57" sid="BpSeq5.11">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss6-BpSeq5.11-1" cat="2" to="vWOTFeedStatus" label="SetProjectSentStatus" state="1" type="1" n="58" sid="BpSeq5.11">
+      <message>Updated variable "vWOTFeedStatus"</message>
+      <details>
+&lt;vWOTFeedStatus&gt;&lt;vWOTFeedStatus xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;SENT&lt;/vWOTFeedStatus&gt;&lt;/vWOTFeedStatus&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss6-BpSeq5.11-1" cat="2" to="vFeedMessage" label="SetProjectSentStatus" state="1" type="1" n="59" sid="BpSeq5.11">
+      <message>Updated variable "vFeedMessage"</message>
+      <details>
+&lt;vFeedMessage&gt;&lt;vFeedMessage xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;OK&lt;/vFeedMessage&gt;&lt;/vFeedMessage&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss6-BpSeq5.11-1" cat="2" label="SetProjectSentStatus" state="5" type="1" n="60" sid="BpSeq5.11">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" type="2" n="61" sid="BpSeq5.11">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" type="2" n="62" sid="BpIf0.10">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" type="2" n="63" sid="BpSeq4.9">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" type="2" n="64" sid="BpTry2.8">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" cat="1" type="2" n="65" sid="BpScp1.7">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss8-BpSeq2.6-6" cat="2" to="InvokeUpdateFeedStatus_update_InputVariable" label="AssignStatus" state="1" type="1" n="66" sid="BpSeq2.6">
+      <message>Updated variable "InvokeUpdateFeedStatus_update_InputVariable"</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;8RkTYWjpekSElU5szPKJdw==&lt;/taskUuid&gt;&lt;feedStatus/&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss8-BpSeq2.6-6" cat="2" to="InvokeUpdateFeedStatus_update_InputVariable" label="AssignStatus" state="1" type="1" n="67" sid="BpSeq2.6">
+      <message>Updated variable "InvokeUpdateFeedStatus_update_InputVariable"</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;8RkTYWjpekSElU5szPKJdw==&lt;/taskUuid&gt;&lt;feedStatus&gt;SENT&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpAss8-BpSeq2.6-6" cat="2" label="AssignStatus" state="5" type="1" n="68" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.416-06:00" wikey="2291649-BpInv3-BpSeq2.6-7" cat="2" label="InvokeUpdateFeedStatus" state="1" type="2" n="69" sid="BpSeq2.6">
+      <message>Started invocation of operation "update" on partner "UpdateWOTSewerAIData".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.422-06:00" wikey="2291649-BpInv3-BpSeq2.6-7" partnerWSDL="" cat="2" label="InvokeUpdateFeedStatus" state="5" type="2" n="70" sid="BpSeq2.6">
+      <message>Invoked 1-way operation "update" on partner "UpdateWOTSewerAIData".</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;8RkTYWjpekSElU5szPKJdw==&lt;/taskUuid&gt;&lt;feedStatus&gt;SENT&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.422-06:00" cat="1" psid="BpSeq2.6" label="SendVideosScope (502)" type="2" n="71" sid="BpScp2.12">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.422-06:00" cat="1" psid="BpScp2.12" label="tryBlock of scope SendVideosScope (502)" type="2" n="72" sid="BpTry3.13">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.422-06:00" cat="1" psid="BpTry3.13" label="sequence (503)" type="2" n="73" sid="BpSeq8.14">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.422-06:00" wikey="2291649-BpInv4-BpSeq8.14-1" cat="2" label="InvokeReadCRInspect" state="1" type="2" n="74" sid="BpSeq8.14">
+      <message>Started invocation of operation "ReadCRInspectSelect" on partner "ReadCRInspect".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpInv4-BpSeq8.14-1" partnerWSDL="" cat="2" label="InvokeReadCRInspect" state="5" type="2" n="75" sid="BpSeq8.14">
+      <message>Invoked 2-way operation "ReadCRInspectSelect" on partner "ReadCRInspect".</message>
+      <details>&lt;messages&gt;
+&lt;InvokeReadCRInspect_ReadCRInspectSelect_InputVariable&gt;&lt;part name="ReadCRInspectSelect_inputParameters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ReadCRInspectSelectInputParameters xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadCRInspect"/&gt;&lt;/part&gt;&lt;/InvokeReadCRInspect_ReadCRInspectSelect_InputVariable&gt;
+&lt;InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable&gt;&lt;part name="VCrInspectToSendCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VCrInspectToSendCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadCRInspect"&gt;&lt;VCrInspectToSend&gt;&lt;inspectionType&gt;PACP&lt;/inspectionType&gt;&lt;pipType&gt;Pipe&lt;/pipType&gt;&lt;projectSid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/projectSid&gt;&lt;inspectionid&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/inspectionid&gt;&lt;workorder&gt;279752.1&lt;/workorder&gt;&lt;project&gt;Testing 23.2 - Error Handing Revised&lt;/project&gt;&lt;poNumber&gt;10.1A&lt;/poNumber&gt;&lt;additionalInfo&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/additionalInfo&gt;&lt;pipeSegmentReference&gt;998&lt;/pipeSegmentReference&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber xsi:nil="true"/&gt;&lt;material&gt;XXX&lt;/material&gt;&lt;pipeUse&gt;SW&lt;/pipeUse&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh&gt;MH282948&lt;/upstreamMh&gt;&lt;downstreamMh&gt;MH282943&lt;/downstreamMh&gt;&lt;facilityType&gt;8&lt;/facilityType&gt;&lt;facilityId&gt;PIP998&lt;/facilityId&gt;&lt;facilityoi&gt;226611&lt;/facilityoi&gt;&lt;shape&gt;C&lt;/shape&gt;&lt;accessType xsi:nil="true"/&gt;&lt;mhUse xsi:nil="true"/&gt;&lt;wallMaterial xsi:nil="true"/&gt;&lt;benchMaterial xsi:nil="true"/&gt;&lt;channelMaterial xsi:nil="true"/&gt;&lt;wallBysize xsi:nil="true"/&gt;&lt;wallDepth xsi:nil="true"/&gt;&lt;elevation xsi:nil="true"/&gt;&lt;frameMaterial xsi:nil="true"/&gt;&lt;height&gt;250&lt;/height&gt;&lt;upElevation&gt;654.279&lt;/upElevation&gt;&lt;upGradeToInvert&gt;3.689&lt;/upGradeToInvert&gt;&lt;downElevation&gt;654.90099999999995&lt;/downElevation&gt;&lt;downGradeToInvert&gt;4.176&lt;/downGradeToInvert&gt;&lt;street&gt; 4631 124 AVE&lt;/street&gt;&lt;city&gt;Edmonton&lt;/city&gt;&lt;totalLength&gt;113.158&lt;/totalLength&gt;&lt;yearConstructed&gt;1986&lt;/yearConstructed&gt;&lt;size xsi:nil="true"/&gt;&lt;drainageArea&gt;BERGMAN&lt;/drainageArea&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;inspectionSid xsi:nil="true"/&gt;&lt;/VCrInspectToSend&gt;&lt;/VCrInspectToSendCollection&gt;&lt;/part&gt;&lt;/InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable&gt;&lt;/messages&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpAss9-BpSeq8.14-2" cat="2" to="vInspectRowCount" label="SetInspectRowCount" state="1" type="1" n="76" sid="BpSeq8.14">
+      <message>Updated variable "vInspectRowCount"</message>
+      <details>
+&lt;vInspectRowCount&gt;&lt;vInspectRowCount xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:int" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1&lt;/vInspectRowCount&gt;&lt;/vInspectRowCount&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpAss9-BpSeq8.14-2" cat="2" label="SetInspectRowCount" state="5" type="1" n="77" sid="BpSeq8.14">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpSeq8.14" label="HasRowsIf (513)" type="2" n="78" sid="BpIf1.15">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpIf1_Nd-BpIf1.15-1" cat="2" label="HasRowsIf" state="5" type="2" n="79" sid="BpIf1.15">
+      <message>If is selected. Condition is "$vInspectRowCount &gt; 0".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpIf1.15" label="sequence (515)" type="2" n="80" sid="BpSeq9.16">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpSeq9.16" label="ForEach_Row (517)" type="2" n="81" sid="BpFrE0.17">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpFrE0_Nd-BpFrE0.17-1" cat="2" label="ForEach_Row" state="5" type="2" n="82" sid="BpFrE0.17">
+      <message>BPEL "forEach" activity: startCounterValue is "1", finalCounterValue is "1".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpFrE0.17" label="ProcessOneRow (521)" type="2" n="83" sid="BpScp3.18">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpScp3.18" label="tryBlock of scope ProcessOneRow (521)" type="2" n="84" sid="BpTry4.19">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpTry4.19" label="sequence (538)" type="2" n="85" sid="BpSeq11.20">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpSeq11.20" label="OnlyProcessMatchingProjectSid (539)" type="2" n="86" sid="BpIf2.21">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" wikey="2291649-BpIf2_Nd-BpIf2.21-1" cat="2" label="OnlyProcessMatchingProjectSid" state="5" type="2" n="87" sid="BpIf2.21">
+      <message>If is selected. Condition is "true()".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.425-06:00" cat="1" psid="BpIf2.21" label="sequence (542)" type="2" n="88" sid="BpSeq12.22">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.426-06:00" wikey="2291649-BpAss11-BpSeq12.22-1" cat="2" to="vInspectJson" label="BuildInspectJson" state="1" type="1" n="89" sid="BpSeq12.22">
+      <message>Updated variable "vInspectJson"</message>
+      <details>
+&lt;vInspectJson&gt;&lt;vInspectJson xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;{"items":[{"project_sid":"f1191361-68e9-7a44-8495-4e6cccf28977","header":{"InspectionID":"b5c793ac-199e-7e40-8874-c9f27c2c52db","Inspection_Type":"PACP","Pip_Type":"Pipe","Surveyed_By":"","Certificate_Number":"","Material":"XXX","WorkOrder":"279752.1","PO_Number":"10.1A","Project":"Testing 23.2 - Error Handing Revised","Additional_Info":"WMS Team Testing 23.2 - Error Handing Revise","Inspection_Status":"","Upstream_MH":"MH282948","Downstream_MH":"MH282943","Pipe_Segment_Reference":"998","Lateral_Segment_Reference":"","Access_Point":"","Manhole_Number":"","Pipe_Use":"","Cover_Shape":"","Facility_ID":"PIP998","Shape":"C","Access_Type":"","MH_Use":"","Wall_Material":"","Bench_Material":"","Channel_Material":"","Wall_BySize":"","Wall_Depth":"","Elevation":"","Frame_Material":"","Height":"250","Up_Elevation":"654.279","Up_Grade_To_Invert":"3.689","Down_Elevation":"654.90099999999995","Down_Grade_To_Invert":"4.176","Street":"4631 124 AVE","City":"Edmonton","Total_Length":"113.158","Year_Constructed":"1986","Size":"","Drainage_Area":"BERGMAN","Feed_Status":"NEW"}}]}&lt;/vInspectJson&gt;&lt;/vInspectJson&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.426-06:00" wikey="2291649-BpAss11-BpSeq12.22-1" cat="2" label="BuildInspectJson" state="5" type="1" n="90" sid="BpSeq12.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.427-06:00" wikey="2291649-BxExe2-BpSeq12.22-2" cat="2" label="SetInspectOpaque" state="5" type="2" n="91" sid="BpSeq12.22">
+      <message>bpelx:exec executed</message>
+   </event>
+   <event date="2026-04-08T11:44:55.427-06:00" wikey="2291649-BpAss12-BpSeq12.22-3" cat="2" to="vOutFileName" label="SetOutFileName" state="1" type="1" n="92" sid="BpSeq12.22">
+      <message>Updated variable "vOutFileName"</message>
+      <details>
+&lt;vOutFileName&gt;&lt;vOutFileName xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;inspect_f1191361-68e9-7a44-8495-4e6cccf28977_b5c793ac-199e-7e40-8874-c9f27c2c52db.json&lt;/vOutFileName&gt;&lt;/vOutFileName&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.427-06:00" wikey="2291649-BpAss12-BpSeq12.22-3" cat="2" label="SetOutFileName" state="5" type="1" n="93" sid="BpSeq12.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.427-06:00" wikey="2291649-BpInv5-BpSeq12.22-4" cat="2" label="WriteInspectJson" state="1" type="2" n="94" sid="BpSeq12.22">
+      <message>Started invocation of operation "Write" on partner "ExportInspectUpdate_sp".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.427-06:00" wikey="2291649-BpInv5-BpSeq12.22-4" cat="2" label="WriteInspectJson" state="1" type="2" n="95" sid="BpSeq12.22">
+      <message>Sending property "jca.file.FileName", value is "inspect_f1191361-68e9-7a44-8495-4e6cccf28977_b5c793ac-199e-7e40-8874-c9f27c2c52db.json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" wikey="2291649-BpInv5-BpSeq12.22-4" partnerWSDL="" cat="2" label="WriteInspectJson" state="5" type="2" n="96" sid="BpSeq12.22">
+      <message>Invoked 1-way operation "Write" on partner "ExportInspectUpdate_sp".</message>
+      <details>
+&lt;fileInspectWriteRequest&gt;&lt;part name="opaque" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;opaqueElement xmlns="http://xmlns.oracle.com/pcbpel/adapter/opaque/"&gt;eyJpdGVtcyI6W3sicHJvamVjdF9zaWQiOiJmMTE5MTM2MS02OGU5LTdhNDQtODQ5NS00ZTZjY2NmMjg5NzciLCJoZWFkZXIiOnsiSW5zcGVjdGlvbklEIjoiYjVjNzkzYWMtMTk5ZS03ZTQwLTg4NzQtYzlmMjdjMmM1MmRiIiwiSW5zcGVjdGlvbl9UeXBlIjoiUEFDUCIsIlBpcF9UeXBlIjoiUGlwZSIsIlN1cnZleWVkX0J5IjoiIiwiQ2VydGlmaWNhdGVfTnVtYmVyIjoiIiwiTWF0ZXJpYWwiOiJYWFgiLCJXb3JrT3JkZXIiOiIyNzk3NTIuMSIsIlBPX051bWJlciI6IjEwLjFBIiwiUHJvamVjdCI6IlRlc3RpbmcgMjMuMiAtIEVycm9yIEhhbmRpbmcgUmV2aXNlZCIsIkFkZGl0aW9uYWxfSW5mbyI6IldNUyBUZWFtIFRlc3RpbmcgMjMuMiAtIEVycm9yIEhhbmRpbmcgUmV2aXNlIiwiSW5zcGVjdGlvbl9TdGF0dXMiOiIiLCJVcHN0cmVhbV9NSCI6Ik1IMjgyOTQ4IiwiRG93bnN0cmVhbV9NSCI6Ik1IMjgyOTQzIiwiUGlwZV9TZWdtZW50X1JlZmVyZW5jZSI6Ijk5OCIsIkxhdGVyYWxfU2VnbWVudF9SZWZlcmVuY2UiOiIiLCJBY2Nlc3NfUG9pbnQiOiIiLCJNYW5ob2xlX051bWJlciI6IiIsIlBpcGVfVXNlIjoiIiwiQ292ZXJfU2hhcGUiOiIiLCJGYWNpbGl0eV9JRCI6IlBJUDk5OCIsIlNoYXBlIjoiQyIsIkFjY2Vzc19UeXBlIjoiIiwiTUhfVXNlIjoiIiwiV2FsbF9NYXRlcmlhbCI6IiIsIkJlbmNoX01hdGVyaWFsIjoiIiwiQ2hhbm5lbF9NYXRlcmlhbCI6IiIsIldhbGxfQnlTaXplIjoiIiwiV2FsbF9EZXB0aCI6IiIsIkVsZXZhdGlvbiI6IiIsIkZyYW1lX01hdGVyaWFsIjoiIiwiSGVpZ2h0IjoiMjUwIiwiVXBfRWxldmF0aW9uIjoiNjU0LjI3OSIsIlVwX0dyYWRlX1RvX0ludmVydCI6IjMuNjg5IiwiRG93bl9FbGV2YXRpb24iOiI2NTQuOTAwOTk5OTk5OTk5OTUiLCJEb3duX0dyYWRlX1RvX0ludmVydCI6IjQuMTc2IiwiU3RyZWV0IjoiNDYzMSAxMjQgQVZFIiwiQ2l0eSI6IkVkbW9udG9uIiwiVG90YWxfTGVuZ3RoIjoiMTEzLjE1OCIsIlllYXJfQ29uc3RydWN0ZWQiOiIxOTg2IiwiU2l6ZSI6IiIsIkRyYWluYWdlX0FyZWEiOiJCRVJHTUFOIiwiRmVlZF9TdGF0dXMiOiJORVcifX1dfQ==&lt;/opaqueElement&gt;&lt;/part&gt;&lt;/fileInspectWriteRequest&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" wikey="2291649-BpAss13-BpSeq12.22-5" cat="2" to="vFeedStatus" label="InitRowStatus" state="1" type="1" n="97" sid="BpSeq12.22">
+      <message>Updated variable "vFeedStatus"</message>
+      <details>
+&lt;vFeedStatus&gt;&lt;vFeedStatus xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;ERROR&lt;/vFeedStatus&gt;&lt;/vFeedStatus&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" wikey="2291649-BpAss13-BpSeq12.22-5" cat="2" to="vFeedMessage" label="InitRowStatus" state="1" type="1" n="98" sid="BpSeq12.22">
+      <message>Updated variable "vFeedMessage"</message>
+      <details>
+&lt;vFeedMessage&gt;&lt;vFeedMessage xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;NOT_CONFIRMED&lt;/vFeedMessage&gt;&lt;/vFeedMessage&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" wikey="2291649-BpAss13-BpSeq12.22-5" cat="2" label="InitRowStatus" state="5" type="1" n="99" sid="BpSeq12.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" cat="1" psid="BpSeq12.22" label="PutVideos_AllTypes (641)" type="2" n="100" sid="BpScp4.23">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" cat="1" psid="BpScp4.23" label="tryBlock of scope PutVideos_AllTypes (641)" type="2" n="101" sid="BpTry5.24">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.432-06:00" cat="1" psid="BpTry5.24" label="sequence (666)" type="2" n="102" sid="BpSeq14.25">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpAss17-BpSeq14.25-1" cat="2" to="vAuth" label="InitPutVideosHeaders" state="1" type="1" n="103" sid="BpSeq14.25">
+      <message>Updated variable "vAuth"</message>
+      <details>
+&lt;vAuth&gt;&lt;vAuth&gt;X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d&lt;/vAuth&gt;&lt;/vAuth&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpAss17-BpSeq14.25-1" cat="2" to="vCT" label="InitPutVideosHeaders" state="1" type="1" n="104" sid="BpSeq14.25">
+      <message>Updated variable "vCT"</message>
+      <details>
+&lt;vCT&gt;&lt;vCT&gt;application/json&lt;/vCT&gt;&lt;/vCT&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpAss17-BpSeq14.25-1" cat="2" to="vAccept" label="InitPutVideosHeaders" state="1" type="1" n="105" sid="BpSeq14.25">
+      <message>Updated variable "vAccept"</message>
+      <details>
+&lt;vAccept&gt;&lt;vAccept xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;application/json&lt;/vAccept&gt;&lt;/vAccept&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpAss17-BpSeq14.25-1" cat="2" to="vRespType" label="InitPutVideosHeaders" state="1" type="1" n="106" sid="BpSeq14.25">
+      <message>Updated variable "vRespType"</message>
+      <details>
+&lt;vRespType&gt;&lt;vRespType xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;json&lt;/vRespType&gt;&lt;/vRespType&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpAss17-BpSeq14.25-1" cat="2" label="InitPutVideosHeaders" state="5" type="1" n="107" sid="BpSeq14.25">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" cat="1" psid="BpSeq14.25" label="PickEndpointIf (685)" type="2" n="108" sid="BpIf3.26">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" wikey="2291649-BpIf3_Nd-BpIf3.26-1" cat="2" label="PickEndpointIf" state="5" type="2" n="109" sid="BpIf3.26">
+      <message>ElseIf is selected. Condition is "normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[$i]/topCRI:inspectionType)) = 'PACP'"</message>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" cat="1" psid="BpIf3.26" label="elseif (1086)" type="2" n="110" sid="BpEli1.27">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.433-06:00" cat="1" psid="BpEli1.27" label="sequence (1088)" type="2" n="111" sid="BpSeq21.28">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="112" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;vp:project_sid/&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;vp:InspectionID/&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder/&gt;
+                                              &lt;vp:Project/&gt;
+                                              &lt;vp:PO_Number/&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="113" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;vp:InspectionID/&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder/&gt;
+                                              &lt;vp:Project/&gt;
+                                              &lt;vp:PO_Number/&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="114" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder/&gt;
+                                              &lt;vp:Project/&gt;
+                                              &lt;vp:PO_Number/&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="115" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project/&gt;
+                                              &lt;vp:PO_Number/&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="116" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number/&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="117" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info/&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="118" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;vp:Pipe_Segment_Reference/&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="119" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length/&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.434-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="120" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed/&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="121" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;vp:Pipe_Use/&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="122" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;vp:Material/&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="123" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;vp:Downstream_MH/&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="124" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;vp:Upstream_MH/&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="125" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;vp:Shape/&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="126" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;vp:Drainage_Area/&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="127" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;vp:Street/&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="128" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;vp:City/&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.435-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="129" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height/&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="130" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation/&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="131" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert/&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="132" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert&gt;3.689&lt;/vp:Up_Grade_To_Invert&gt;
+                                              &lt;vp:Down_Elevation/&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="133" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert&gt;3.689&lt;/vp:Up_Grade_To_Invert&gt;
+                                              &lt;vp:Down_Elevation&gt;654.90099999999995&lt;/vp:Down_Elevation&gt;
+                                              &lt;vp:Down_Grade_To_Invert/&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" to="putVideosPACP_In" label="BuildPACPRequest" state="1" type="1" n="134" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              &lt;vp:Inspection_Type/&gt;
+                                              &lt;vp:Pip_Type/&gt;
+                                              &lt;vp:Surveyed_By/&gt;
+                                              &lt;vp:Certificate_Number/&gt;
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              &lt;vp:Inspection_Status/&gt;
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              &lt;vp:Lateral_Segment_Reference/&gt;
+                                              &lt;vp:Access_Point/&gt;
+                                              &lt;vp:Manhole_Number/&gt;
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              &lt;vp:Cover_Shape/&gt;
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              &lt;vp:Facility_ID/&gt;
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              &lt;vp:Access_Type/&gt;
+                                              &lt;vp:MH_Use/&gt;
+                                              &lt;vp:Wall_Material/&gt;
+                                              &lt;vp:Bench_Material/&gt;
+                                              &lt;vp:Channel_Material/&gt;
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert&gt;3.689&lt;/vp:Up_Grade_To_Invert&gt;
+                                              &lt;vp:Down_Elevation&gt;654.90099999999995&lt;/vp:Down_Elevation&gt;
+                                              &lt;vp:Down_Grade_To_Invert&gt;4.176&lt;/vp:Down_Grade_To_Invert&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              &lt;vp:Size/&gt;
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              &lt;vp:Feed_Status/&gt;
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.436-06:00" wikey="2291649-BpAss26-BpSeq21.28-1" cat="2" label="BuildPACPRequest" state="5" type="1" n="135" sid="BpSeq21.28">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpAss27-BpSeq21.28-2" cat="2" to="putVideosPACP_In" label="CleanPACPRequest" state="1" type="1" n="136" sid="BpSeq21.28">
+      <message>Updated variable "putVideosPACP_In"</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              
+                                              
+                                              
+                                              
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              
+                                              
+                                              
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert&gt;3.689&lt;/vp:Up_Grade_To_Invert&gt;
+                                              &lt;vp:Down_Elevation&gt;654.90099999999995&lt;/vp:Down_Elevation&gt;
+                                              &lt;vp:Down_Grade_To_Invert&gt;4.176&lt;/vp:Down_Grade_To_Invert&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpAss27-BpSeq21.28-2" cat="2" label="CleanPACPRequest" state="5" type="1" n="137" sid="BpSeq21.28">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" cat="2" label="InvokePutVideosPACP" state="1" type="2" n="138" sid="BpSeq21.28">
+      <message>Started invocation of operation "putVideosPACP" on partner "SewerAIVideos".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" cat="2" label="InvokePutVideosPACP" state="1" type="2" n="139" sid="BpSeq21.28">
+      <message>Sending property "rest.binding.http.Authorization", value is "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" cat="2" label="InvokePutVideosPACP" state="1" type="2" n="140" sid="BpSeq21.28">
+      <message>Sending property "rest.binding.responseType", value is "json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" cat="2" label="InvokePutVideosPACP" state="1" type="2" n="141" sid="BpSeq21.28">
+      <message>Sending property "rest.binding.http.Accept", value is "application/json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.441-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" cat="2" label="InvokePutVideosPACP" state="1" type="2" n="142" sid="BpSeq21.28">
+      <message>Sending property "rest.binding.http.Content-Type", value is "application/json".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.876-06:00" wikey="2291649-BpInv8-BpSeq21.28-3" partnerWSDL="" cat="2" label="InvokePutVideosPACP" state="5" type="2" n="143" sid="BpSeq21.28">
+      <message>Invoked 1-way operation "putVideosPACP" on partner "SewerAIVideos".</message>
+      <details>
+&lt;putVideosPACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosPACPRequest xmlns:vp="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"&gt;
+                                          &lt;vp:items&gt;
+                                            &lt;project_sid&gt;f1191361-68e9-7a44-8495-4e6cccf28977&lt;/project_sid&gt;
+                                            &lt;vp:header&gt;
+                                              &lt;InspectionID&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/InspectionID&gt;
+                                              
+                                              
+                                              
+                                              
+                                              &lt;Material&gt;XXX&lt;/Material&gt;
+                                              
+                                              &lt;Upstream_MH&gt;MH282948&lt;/Upstream_MH&gt;
+                                              &lt;Downstream_MH&gt;MH282943&lt;/Downstream_MH&gt;
+                                              &lt;Pipe_Segment_Reference&gt;998&lt;/Pipe_Segment_Reference&gt;
+                                              
+                                              
+                                              
+                                              &lt;Pipe_Use&gt;SW&lt;/Pipe_Use&gt;
+                                              
+                                              &lt;vp:Additional_Info&gt;WMS Team Testing 23.2 - Error Handing Revise&lt;/vp:Additional_Info&gt;
+                                              
+                                              &lt;Shape&gt;C&lt;/Shape&gt;
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              &lt;vp:Height&gt;250&lt;/vp:Height&gt;
+                                              &lt;vp:Up_Elevation&gt;654.279&lt;/vp:Up_Elevation&gt;
+                                              &lt;vp:Up_Grade_To_Invert&gt;3.689&lt;/vp:Up_Grade_To_Invert&gt;
+                                              &lt;vp:Down_Elevation&gt;654.90099999999995&lt;/vp:Down_Elevation&gt;
+                                              &lt;vp:Down_Grade_To_Invert&gt;4.176&lt;/vp:Down_Grade_To_Invert&gt;
+                                              &lt;Street&gt; 4631 124 AVE&lt;/Street&gt;
+                                              &lt;City&gt;Edmonton&lt;/City&gt;
+                                              
+                                              &lt;Drainage_Area&gt;BERGMAN&lt;/Drainage_Area&gt;
+                                              &lt;vp:Total_Length&gt;113.158&lt;/vp:Total_Length&gt;
+                                              &lt;vp:Year_Constructed&gt;1986&lt;/vp:Year_Constructed&gt;
+                                              
+                                              &lt;vp:WorkOrder&gt;279752.1&lt;/vp:WorkOrder&gt;
+                                              &lt;vp:Project&gt;Testing 23.2 - Error Handing Revised&lt;/vp:Project&gt;
+                                              &lt;vp:PO_Number&gt;10.1A&lt;/vp:PO_Number&gt;
+                                            &lt;/vp:header&gt;
+                                          &lt;/vp:items&gt;
+                                        &lt;/VideosPACPRequest&gt;&lt;/part&gt;&lt;/putVideosPACP_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.876-06:00" cat="1" psid="BpSeq21.28" label="CheckPutVideosPACPStatus (1256)" type="2" n="144" sid="BpIf6.29">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpIf6_Nd-BpIf6.29-1" cat="2" label="CheckPutVideosPACPStatus" state="5" type="2" n="145" sid="BpIf6.29">
+      <message>Else is selected.</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" psid="BpIf6.29" label="else (1264)" type="2" n="146" sid="BpEls3.30">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" psid="BpEls3.30" label="sequence (1265)" type="2" n="147" sid="BpSeq23.31">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss29-BpSeq23.31-1" cat="2" to="vFeedStatus" label="SetPutVideosPACPErrorStatusNon2xx" state="1" type="1" n="148" sid="BpSeq23.31">
+      <message>Updated variable "vFeedStatus"</message>
+      <details>
+&lt;vFeedStatus&gt;&lt;vFeedStatus xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;ERROR&lt;/vFeedStatus&gt;&lt;/vFeedStatus&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss29-BpSeq23.31-1" cat="2" to="vFeedMessage" label="SetPutVideosPACPErrorStatusNon2xx" state="1" type="1" n="149" sid="BpSeq23.31">
+      <message>Updated variable "vFeedMessage"</message>
+      <details>
+&lt;vFeedMessage&gt;&lt;vFeedMessage xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;InvokePutVideosPACP non-2xx HTTP status: &lt;/vFeedMessage&gt;&lt;/vFeedMessage&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss29-BpSeq23.31-1" cat="2" label="SetPutVideosPACPErrorStatusNon2xx" state="5" type="1" n="150" sid="BpSeq23.31">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="151" sid="BpSeq23.31">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="152" sid="BpEls3.30">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="153" sid="BpIf6.29">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="154" sid="BpSeq21.28">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="155" sid="BpEli1.27">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="156" sid="BpIf3.26">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="157" sid="BpSeq14.25">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="158" sid="BpTry5.24">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" cat="1" type="2" n="159" sid="BpScp4.23">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss31-BpSeq12.22-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="160" sid="BpSeq12.22">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:projectSid/&gt;
+                          &lt;topUCS:inspectionid/&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss31-BpSeq12.22-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="161" sid="BpSeq12.22">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:projectSid&gt;&lt;/topUCS:projectSid&gt;
+                          &lt;topUCS:inspectionid/&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss31-BpSeq12.22-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="162" sid="BpSeq12.22">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:projectSid&gt;&lt;/topUCS:projectSid&gt;
+                          &lt;topUCS:inspectionid&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/topUCS:inspectionid&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss31-BpSeq12.22-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="163" sid="BpSeq12.22">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:projectSid&gt;&lt;/topUCS:projectSid&gt;
+                          &lt;topUCS:inspectionid&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/topUCS:inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;ERROR&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.877-06:00" wikey="2291649-BpAss31-BpSeq12.22-6" cat="2" label="BuildUpdateCRInspectStatus" state="5" type="1" n="164" sid="BpSeq12.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-04-08T11:44:55.878-06:00" wikey="2291649-BpInv9-BpSeq12.22-7" cat="2" label="InvokeUpdateCRInspectStatus" state="1" type="2" n="165" sid="BpSeq12.22">
+      <message>Started invocation of operation "update" on partner "UpdateCRInspectStatus".</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" wikey="2291649-BpInv9-BpSeq12.22-7" partnerWSDL="" cat="2" label="InvokeUpdateCRInspectStatus" state="5" type="2" n="166" sid="BpSeq12.22">
+      <message>Invoked 1-way operation "update" on partner "UpdateCRInspectStatus".</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:projectSid&gt;&lt;/topUCS:projectSid&gt;
+                          &lt;topUCS:inspectionid&gt;b5c793ac-199e-7e40-8874-c9f27c2c52db&lt;/topUCS:inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;ERROR&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="167" sid="BpSeq12.22">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="168" sid="BpIf2.21">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="169" sid="BpSeq11.20">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="170" sid="BpTry4.19">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="171" sid="BpScp3.18">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="172" sid="BpFrE0.17">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="173" sid="BpSeq9.16">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="174" sid="BpIf1.15">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="175" sid="BpSeq8.14">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="176" sid="BpTry3.13">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="177" sid="BpScp2.12">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="178" sid="BpSeq2.6">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="179" sid="BpTry1.5">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="180" sid="BpScp0.4">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="181" sid="BpSeq0.3">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="182" sid="BpTry0.2">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="1" type="2" n="183" sid="BpPrc0.1">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-04-08T11:44:55.896-06:00" cat="2" type="2" n="184" sid="BpPrc0.1">
+      <message>BPEL process instance "2291649" completed</message>
+   </event>
+</audit_trail>
