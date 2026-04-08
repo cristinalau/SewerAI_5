@@ -1,32 +1,26 @@
-[10:14:15 AM] ----  Deployment started.  ----
-[10:14:15 AM] Target platform is  (Weblogic 12.x).
-[10:14:15 AM] Running dependency analysis...
-[10:14:15 AM] Building...
-[10:14:15 AM] Deploying profile...
-[10:14:15 AM] Updating revision id for the SOA Project 'IvaraToSewerAI.jpr' to '1.0'..
-[10:14:15 AM] Wrote Archive Module to C:\Users\clau\source\repos\Ivara\Integration12c\IvaraToSewerAI\deploy\sca_DEV_SOA.jar
-[10:14:15 AM] Deploying sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302]
-[10:14:15 AM] Processing sar=/C:/Users/clau/source/repos/Ivara/Integration12c/IvaraToSewerAI/deploy/sca_DEV_SOA.jar
-[10:14:15 AM] Adding sar file - C:\Users\clau\source\repos\Ivara\Integration12c\IvaraToSewerAI\deploy\sca_DEV_SOA.jar
-[10:14:15 AM] Preparing to send HTTP request for deployment
-[10:14:15 AM] Creating HTTP connection to host:LADOMW01.epcor.ca, port:7302
-[10:14:15 AM] Sending internal deployment descriptor
-[10:14:15 AM] Sending archive - sca_DEV_SOA.jar
-[10:14:16 AM] Received HTTP response from the server, response code=500
-[10:14:16 AM] Error deploying archive sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302] 
-[10:14:16 AM] HTTP error code returned [500]
-[10:14:16 AM] Error message from server:
-There was an error deploying the composite on soa_server1: Error occurred during deployment of component: SendWOTChanges to service engine: implementation.bpel, for composite: IvaraToSewerAI: ORABPEL-05215
-
-Error while loading process.
-The process domain is encountering the following errors while loading the process "SendWOTChanges" (composite "Ivara12c/IvaraToSewerAI!1.0*soa_f6d1ba5b-d19b-4ada-b5d4-6a5410df964e"): this is only a psuedo object.
-This error contained an exception thrown by the underlying process loader module.
-Check the exception trace in the log (with logging level set to debug mode). If there is a patch installed on the server, verify that the bpelcClasspath domain property includes the patch classes.
-.
+[10:20:59 AM] ----  Deployment started.  ----
+[10:20:59 AM] Target platform is  (Weblogic 12.x).
+[10:20:59 AM] Running dependency analysis...
+[10:20:59 AM] Building...
+[10:20:59 AM] Deploying profile...
+[10:20:59 AM] Updating revision id for the SOA Project 'IvaraToSewerAI.jpr' to '1.0'..
+[10:20:59 AM] Wrote Archive Module to C:\Users\clau\source\repos\Ivara\Integration12c\IvaraToSewerAI\deploy\sca_DEV_SOA.jar
+[10:20:59 AM] Deploying sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302]
+[10:20:59 AM] Processing sar=/C:/Users/clau/source/repos/Ivara/Integration12c/IvaraToSewerAI/deploy/sca_DEV_SOA.jar
+[10:20:59 AM] Adding sar file - C:\Users\clau\source\repos\Ivara\Integration12c\IvaraToSewerAI\deploy\sca_DEV_SOA.jar
+[10:20:59 AM] Preparing to send HTTP request for deployment
+[10:20:59 AM] Creating HTTP connection to host:LADOMW01.epcor.ca, port:7302
+[10:20:59 AM] Sending internal deployment descriptor
+[10:20:59 AM] Sending archive - sca_DEV_SOA.jar
+[10:21:00 AM] Received HTTP response from the server, response code=500
+[10:21:00 AM] Error deploying archive sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302] 
+[10:21:00 AM] HTTP error code returned [500]
+[10:21:00 AM] Error message from server:
+There was an error deploying the composite on soa_server1: Update Failed: java.lang.RuntimeException: Missing fault name for a failure response. operation: putProjects, status:400: Missing fault name for a failure response. operation: putProjects, status:400.
  
-[10:14:16 AM] Check server log for more details.
-[10:14:16 AM] Error deploying archive sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302] 
-[10:14:16 AM] Deployment cancelled.
-[10:14:16 AM] ----  Deployment incomplete  ----.
-[10:14:16 AM] Error deploying archive file:/C:/Users/clau/source/repos/Ivara/Integration12c/IvaraToSewerAI/deploy/sca_DEV_SOA.jar 
+[10:21:00 AM] Check server log for more details.
+[10:21:00 AM] Error deploying archive sca_DEV_SOA.jar to partition "Ivara12c" on server soa_server1 [http://LADOMW01.epcor.ca:7302] 
+[10:21:00 AM] Deployment cancelled.
+[10:21:00 AM] ----  Deployment incomplete  ----.
+[10:21:00 AM] Error deploying archive file:/C:/Users/clau/source/repos/Ivara/Integration12c/IvaraToSewerAI/deploy/sca_DEV_SOA.jar 
  (oracle.tip.tools.ide.fabric.deploy.common.SOARemoteDeployer)
