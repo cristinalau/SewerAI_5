@@ -64,6 +64,7 @@
     <variable name="UpdateCRInspectStatus_In" messageType="uc:EpseweraiCrInspectCollection_msg"/>
     <!-- Working status strings per row -->
     <variable name="vFeedStatus" type="xsd:string"/>
+    <variable name="vWOTFeedStatus" type="xsd:string"/>
     <variable name="vFeedMessage" type="xsd:string"/>
     <variable name="fileInspectWriteRequest" messageType="fw2:Write_msg"/>
     <variable name="vInspectJson" type="xsd:string"/>
@@ -417,7 +418,7 @@ try {
                   </copy>
                   <copy>
                     <from>'ERROR'</from>
-                    <to>$vFeedStatus</to>
+                    <to>$vWOTFeedStatus</to>
                   </copy>
                   <copy>
                     <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutProjects failed: http=', normalize-space($vPutProjectsStatusCode), '; fault=REST fault in putProjects')</from>
@@ -456,7 +457,7 @@ try {
                 <assign name="SetProjectSentStatus" bpelx:insertMissingToData="yes">
                   <copy>
                     <from>'SENT'</from>
-                    <to>$vFeedStatus</to>
+                    <to>$vWOTFeedStatus</to>
                   </copy>
                   <copy>
                     <from>'OK'</from>
@@ -469,7 +470,7 @@ try {
                   <assign name="SetProjectErrorStatusNon2xx" bpelx:insertMissingToData="yes">
                     <copy>
                       <from>'ERROR'</from>
-                      <to>$vFeedStatus</to>
+                      <to>$vWOTFeedStatus</to>
                     </copy>
                     <copy>
                       <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('putProjects non-2xx HTTP status: ', normalize-space($vPutProjectsStatusCode))</from>
@@ -490,7 +491,7 @@ try {
           </copy>
           <copy>
             <!-- Use literal child form (or expression child) to avoid attribute validation errors -->
-            <from>$vFeedStatus</from>
+            <from>$vWOTFeedStatus</from>
             <to>$InvokeUpdateFeedStatus_update_InputVariable.EpseweraiWotStg1Collection/ns2:EpseweraiWotStg1/ns2:feedStatus</to>
           </copy>
         </assign>
