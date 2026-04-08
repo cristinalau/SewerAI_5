@@ -284,7 +284,7 @@ try {
                     .encodeToString(payloadJson.getBytes("UTF-8"));     
      
     setVariableData("fileWriteRequest", "opaque", "/opaque:opaqueElement", base64);     
-    setVariableData("vAuth", "X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d");   
+    setVariableData("vAuth", "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d");   
     setVariableData("vCT", "application/json");   
    
    
@@ -306,7 +306,7 @@ try {
         </assign>
         <assign name="SetAuth">
           <copy>
-            <from>'X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
+            <from>'X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
             <to>$vAuth</to>
           </copy>
           <copy>
@@ -665,7 +665,7 @@ try {
                             <sequence>
                               <assign name="InitPutVideosHeaders">
                                 <copy>
-                                  <from>'X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
+                                  <from>'X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
                                   <to>$vAuth</to>
                                 </copy>
                                 <copy>
