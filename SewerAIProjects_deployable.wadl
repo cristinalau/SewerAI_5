@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<application xmlns="http://wadl.dev.java.net/2009/02"
+             xmlns:soa="http://www.oracle.com/soa/rest"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:req="http://TargetNamespace.com/SewerAIProjects_putProjects_request">
+  <doc title="SewerAIProjects">RestReference</doc>
+  <grammars>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://TargetNamespace.com/SewerAIProjects_putProjects_request"
+                  schemaLocation="../Schemas/SewerAIProjects.xsd"/>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"
+                elementFormDefault="qualified">
+      <xsd:element name="empty">
+        <xsd:complexType/>
+      </xsd:element>
+    </xsd:schema>
+  </grammars>
+  <resources>
+    <resource path="/projects/">
+      <method name="PUT" soa:wsdlOperation="putProjects">
+        <request>
+          <representation mediaType="application/json" element="req:ProjectCreateRequest"/>
+        </request>
+        <response status="200"/>
+        <response status="201"/>
+        <response status="204"/>
+      </method>
+    </resource>
+  </resources>
+</application>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions
+     name="SewerAIProjects"
+     targetNamespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"
+     xmlns:req="http://TargetNamespace.com/SewerAIProjects_putProjects_request"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <plnk:partnerLinkType name="SewerAIProjects">
+    <plnk:role name="SewerAIProjectsProvider" portType="tns:SewerAIProjects_ptt"/>
+  </plnk:partnerLinkType>
+
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://TargetNamespace.com/SewerAIProjects_putProjects_request"
+                  schemaLocation="../Schemas/SewerAIProjects.xsd"/>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"
+                elementFormDefault="qualified">
+      <xsd:element name="empty">
+        <xsd:complexType/>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+
+  <wsdl:message name="putProjects_inputMessage">
+    <wsdl:part name="request" element="req:ProjectCreateRequest"/>
+  </wsdl:message>
+
+  <wsdl:message name="Rest_EmptyMessage">
+    <wsdl:part name="Empty" element="tns:empty"/>
+  </wsdl:message>
+
+  <wsdl:portType name="SewerAIProjects_ptt">
+    <wsdl:operation name="putProjects">
+      <wsdl:input message="tns:putProjects_inputMessage"/>
+      <wsdl:output message="tns:Rest_EmptyMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
