@@ -5,6 +5,7 @@
   <import importType="http://schemas.xmlsoap.org/wsdl/" location="../WSDLs/UpdateWOTSewerAIData.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Ivara12c/IvaraToSewerAI/UpdateWOTSewerAIData"/>
   <import importType="http://schemas.xmlsoap.org/wsdl/" location="../WSDLs/ExportWOTUpdate_sp.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/file/Ivara12c/IvaraToSewerAI/ExportWOTUpdate_sp"/>
   <import importType="http://www.w3.org/2001/XMLSchema" location="../Schemas/SewerAIProjects.xsd" namespace="http://TargetNamespace.com/SewerAIProjects_putProjects_request"/>
+  <import importType="http://schemas.xmlsoap.org/wsdl/" location="../WSDLs/SewerAIProjects.wsdl" namespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIProjects"/>
   <!-- New: DB Read (CR_INSPECT) -->
   <import importType="http://schemas.xmlsoap.org/wsdl/" location="../WSDLs/ReadCRInspect.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Ivara12c/IvaraToSewerAI/ReadCRInspect"/>
   <!-- New: DB Update (CR_INSPECT status) -->
@@ -35,6 +36,9 @@
     <!-- DB update input -->
     <variable name="InvokeUpdateFeedStatus_update_InputVariable" messageType="ns1:EpseweraiWotStg1Collection_msg"/>
     <variable name="vPutProjectsReq" messageType="ns3:putProjects_inputMessage"/>
+    <variable name="vPutProjectsResp" messageType="ns3:Rest_EmptyMessage"/>
+    <variable name="vPutProjectsStatusCode" type="xsd:string"/>
+    <variable name="vPutProjectsFault" type="xsd:string"/>
     <!-- Working strings -->
     <variable xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="vProjectSid" type="xsd:string"/>
     <!-- <variable name="varHttpHeaders" type="xsd:string"/>  -->
@@ -78,7 +82,16 @@
                 addAuditTrailEntry("EncodeAndInvoke scope caught a fault.");
               </bpelx:exec>
             </extensionActivity>
-          </sequence>
+          <assign name="BuildProjectErrorStatusOnFault" bpelx:ignoreMissingFromData="yes" bpelx:insertMissingToData="yes">
+  <copy>
+    <from>$inputVariableWOT.EpseweraiWotStg1Collection/top:EpseweraiWotStg1[1]/top:taskUuid</from>
+    <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$InvokeUpdateFeedStatus_update_InputVariable.EpseweraiWotStg1Collection/ns2:EpseweraiWotStg1/ns2:taskUuid</to>
+  </copy>
+  <copy>
+    <from>'ERROR'</from>
+    <to>$InvokeUpdateFeedStatus_update_InputVariable.EpseweraiWotStg1Collection/ns2:EpseweraiWotStg1/ns2:feedStatus</to>
+  </copy>
+</assign><invoke name="InvokeProjectErrorStatusOnFault" bpelx:invokeAsDetail="yes" partnerLink="UpdateWOTSewerAIData" portType="ns1:UpdateWOTSewerAIData_ptt" operation="update" inputVariable="InvokeUpdateFeedStatus_update_InputVariable"/></sequence>
         </catchAll>
       </faultHandlers>
       <sequence>
@@ -271,7 +284,7 @@ try {
                     .encodeToString(payloadJson.getBytes("UTF-8"));     
      
     setVariableData("fileWriteRequest", "opaque", "/opaque:opaqueElement", base64);     
-    setVariableData("vAuth", "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d");   
+    setVariableData("vAuth", "X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d");   
     setVariableData("vCT", "application/json");   
    
    
@@ -293,7 +306,7 @@ try {
         </assign>
         <assign name="SetAuth">
           <copy>
-            <from>'X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
+            <from>'X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
             <to>$vAuth</to>
           </copy>
           <copy>
@@ -305,7 +318,7 @@ try {
             <to>$vAccept</to>
           </copy>
           <copy>
-            <from>'empty'</from>
+            <from>'json'</from>
             <to>$vRespType</to>
           </copy>
         </assign>
@@ -393,14 +406,81 @@ try {
             <to>$vPutProjectsReq.request/ns4:macp_expected_linear_feet</to>
           </copy>
         </assign>
-        <!-- Invoke the REST endpoint -->
-        <invoke name="InvokePutProjects" partnerLink="SewerAIProjects" portType="ns3:SewerAIProjects_ptt" operation="putProjects" inputVariable="vPutProjectsReq" bpelx:invokeAsDetail="yes">
-          <bpelx:toProperties>
-            <bpelx:toProperty name="rest.binding.http.Authorization" variable="vAuth"/>
-            <bpelx:toProperty name="rest.binding.responseType" variable="vRespType"/>
-          </bpelx:toProperties>
-        </invoke>
-        <!-- Mark the DB row as SENT (keep your existing AssignStatus + DB invoke here) -->
+        <scope name="PutProjectsScope">
+          <faultHandlers>
+            <catchAll>
+              <sequence>
+                <assign name="CapturePutProjectsFault" bpelx:ignoreMissingFromData="yes" bpelx:insertMissingToData="yes">
+                  <copy>
+                    <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('REST fault in putProjects. HTTP=', normalize-space($vPutProjectsStatusCode))</from>
+                    <to>$vPutProjectsFault</to>
+                  </copy>
+                  <copy>
+                    <from>'ERROR'</from>
+                    <to>$vFeedStatus</to>
+                  </copy>
+                  <copy>
+                    <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutProjects failed: http=', normalize-space($vPutProjectsStatusCode), '; fault=REST fault in putProjects')</from>
+                    <to>$vFeedMessage</to>
+                  </copy>
+                </assign>
+              </sequence>
+            </catchAll>
+          </faultHandlers>
+          <sequence>
+            <assign name="InitPutProjectsHttpState" bpelx:ignoreMissingFromData="yes" bpelx:insertMissingToData="yes">
+              <copy>
+                <from>''</from>
+                <to>$vPutProjectsStatusCode</to>
+              </copy>
+              <copy>
+                <from>''</from>
+                <to>$vPutProjectsFault</to>
+              </copy>
+            </assign>
+            <!-- Invoke the REST endpoint -->
+            <invoke name="InvokePutProjects" partnerLink="SewerAIProjects" portType="ns3:SewerAIProjects_ptt" operation="putProjects" inputVariable="vPutProjectsReq" outputVariable="vPutProjectsResp" bpelx:invokeAsDetail="yes">
+              <bpelx:toProperties>
+                <bpelx:toProperty name="rest.binding.http.Authorization" variable="vAuth"/>
+                <bpelx:toProperty name="rest.binding.http.Content-Type" variable="vCT"/>
+                <bpelx:toProperty name="rest.binding.http.Accept" variable="vAccept"/>
+                <bpelx:toProperty name="rest.binding.responseType" variable="vRespType"/>
+              </bpelx:toProperties>
+              <bpelx:fromProperties>
+                <bpelx:fromProperty name="rest.binding.http.statusCode" variable="vPutProjectsStatusCode"/>
+              </bpelx:fromProperties>
+            </invoke>
+            <if name="CheckPutProjectsStatus">
+              <condition>starts-with(normalize-space($vPutProjectsStatusCode),'2')</condition>
+              <sequence>
+                <assign name="SetProjectSentStatus" bpelx:insertMissingToData="yes">
+                  <copy>
+                    <from>'SENT'</from>
+                    <to>$vFeedStatus</to>
+                  </copy>
+                  <copy>
+                    <from>'OK'</from>
+                    <to>$vFeedMessage</to>
+                  </copy>
+                </assign>
+              </sequence>
+              <else>
+                <sequence>
+                  <assign name="SetProjectErrorStatusNon2xx" bpelx:insertMissingToData="yes">
+                    <copy>
+                      <from>'ERROR'</from>
+                      <to>$vFeedStatus</to>
+                    </copy>
+                    <copy>
+                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('putProjects non-2xx HTTP status: ', normalize-space($vPutProjectsStatusCode))</from>
+                      <to>$vFeedMessage</to>
+                    </copy>
+                  </assign>
+                </sequence>
+              </else>
+            </if>
+          </sequence>
+        </scope><!-- Mark the DB row as SENT (keep your existing AssignStatus + DB invoke here) -->
         <assign xmlns:bpelx="http://schemas.oracle.com/bpel/extension" name="AssignStatus" bpelx:ignoreMissingFromData="yes" bpelx:insertMissingToData="yes">
           <!-- Copy taskUuid from inbound (Read) to update (Update) request -->
           <!-- Set feedStatus = 'SENT' in the update request -->
@@ -410,7 +490,7 @@ try {
           </copy>
           <copy>
             <!-- Use literal child form (or expression child) to avoid attribute validation errors -->
-            <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">SENT</literal></from>
+            <from>$vFeedStatus</from>
             <to>$InvokeUpdateFeedStatus_update_InputVariable.EpseweraiWotStg1Collection/ns2:EpseweraiWotStg1/ns2:feedStatus</to>
           </copy>
         </assign>
@@ -548,11 +628,11 @@ try {
                           <!-- 3.C Init per-row status -->
                           <assign xmlns:bpelx="http://schemas.oracle.com/bpel/extension" name="InitRowStatus" bpelx:insertMissingToData="yes">
                             <copy>
-                              <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">SENT</literal></from>
+                              <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">ERROR</literal></from>
                               <to>$vFeedStatus</to>
                             </copy>
                             <copy>
-                              <from>'OK'</from>
+                              <from>'NOT_CONFIRMED'</from>
                               <to>$vFeedMessage</to>
                             </copy>
                           </assign>
@@ -574,14 +654,18 @@ try {
                                       <to>$vFeedMessage</to>
                                     </copy>
                                   </assign>
-                                  <rethrow/>
-                                </sequence>
+                                  <assign name="SetFeedStatusErrorFromPutVideosFault" bpelx:insertMissingToData="yes">
+      <copy>
+        <from>'ERROR'</from>
+        <to>$vFeedStatus</to>
+      </copy>
+    </assign></sequence>
                               </catchAll>
                             </faultHandlers>
                             <sequence>
                               <assign name="InitPutVideosHeaders">
                                 <copy>
-                                  <from>'X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
+                                  <from>'X-SAI 12370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
                                   <to>$vAuth</to>
                                 </copy>
                                 <copy>
@@ -591,6 +675,10 @@ try {
                                 <copy>
                                   <from>'application/json'</from>
                                   <to>$vAccept</to>
+                                </copy>
+                                <copy>
+                                  <from>'json'</from>
+                                  <to>$vRespType</to>
                                 </copy>
                               </assign>
                               <if name="PickEndpointIf">
@@ -707,7 +795,23 @@ try {
                                       <bpelx:fromProperty name="rest.binding.http.statusCode" variable="vPutVideosStatusCode"/>
                                     </bpelx:fromProperties>
                                   </invoke>
-                                </sequence>
+                                <if name="CheckPutVideosLACPStatus">
+  <condition>starts-with(normalize-space($vPutVideosStatusCode),'2')</condition>
+  <sequence>
+    <assign name="SetPutVideosLACPSentStatus" bpelx:insertMissingToData="yes">
+      <copy><from>'SENT'</from><to>$vFeedStatus</to></copy>
+      <copy><from>'OK'</from><to>$vFeedMessage</to></copy>
+    </assign>
+  </sequence>
+  <else>
+    <sequence>
+      <assign name="SetPutVideosLACPErrorStatusNon2xx" bpelx:insertMissingToData="yes">
+        <copy><from>'ERROR'</from><to>$vFeedStatus</to></copy>
+        <copy><from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('InvokePutVideosLACP non-2xx HTTP status: ', normalize-space($vPutVideosStatusCode))</from><to>$vFeedMessage</to></copy>
+      </assign>
+    </sequence>
+  </else>
+</if></sequence>
                                 <elseif>
                                   <condition>normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[$i]/topCRI:inspectionType)) = 'MACP'</condition>
                                   <sequence>
@@ -960,7 +1064,23 @@ try {
                                         <bpelx:fromProperty name="rest.binding.http.statusCode" variable="vPutVideosStatusCode"/>
                                       </bpelx:fromProperties>
                                     </invoke>
-                                  </sequence>
+                                  <if name="CheckPutVideosMACPStatus">
+  <condition>starts-with(normalize-space($vPutVideosStatusCode),'2')</condition>
+  <sequence>
+    <assign name="SetPutVideosMACPSentStatus" bpelx:insertMissingToData="yes">
+      <copy><from>'SENT'</from><to>$vFeedStatus</to></copy>
+      <copy><from>'OK'</from><to>$vFeedMessage</to></copy>
+    </assign>
+  </sequence>
+  <else>
+    <sequence>
+      <assign name="SetPutVideosMACPErrorStatusNon2xx" bpelx:insertMissingToData="yes">
+        <copy><from>'ERROR'</from><to>$vFeedStatus</to></copy>
+        <copy><from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('InvokePutVideosMACP non-2xx HTTP status: ', normalize-space($vPutVideosStatusCode))</from><to>$vFeedMessage</to></copy>
+      </assign>
+    </sequence>
+  </else>
+</if></sequence>
                                 </elseif>
                                 <elseif>
                                   <condition>normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[$i]/topCRI:inspectionType)) = 'PACP'</condition>
@@ -1132,7 +1252,23 @@ try {
                                         <bpelx:fromProperty name="rest.binding.http.statusCode" variable="vPutVideosStatusCode"/>
                                       </bpelx:fromProperties>
                                     </invoke>
-                                  </sequence>
+                                  <if name="CheckPutVideosPACPStatus">
+  <condition>starts-with(normalize-space($vPutVideosStatusCode),'2')</condition>
+  <sequence>
+    <assign name="SetPutVideosPACPSentStatus" bpelx:insertMissingToData="yes">
+      <copy><from>'SENT'</from><to>$vFeedStatus</to></copy>
+      <copy><from>'OK'</from><to>$vFeedMessage</to></copy>
+    </assign>
+  </sequence>
+  <else>
+    <sequence>
+      <assign name="SetPutVideosPACPErrorStatusNon2xx" bpelx:insertMissingToData="yes">
+        <copy><from>'ERROR'</from><to>$vFeedStatus</to></copy>
+        <copy><from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('InvokePutVideosPACP non-2xx HTTP status: ', normalize-space($vPutVideosStatusCode))</from><to>$vFeedMessage</to></copy>
+      </assign>
+    </sequence>
+  </else>
+</if></sequence>
                                 </elseif>
                                 <else>
                                   <sequence>
@@ -1178,7 +1314,7 @@ try {
                               <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid</to>
                             </copy>
                             <copy>
-                              <from>'SENT'</from>
+                              <from>$vFeedStatus</from>
                               <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus</to>
                             </copy>
                           </assign><!-- Now actually call the DB adapter -->
@@ -1211,5 +1347,4 @@ try {
     <!-- closes EncodeAndInvoke scope -->
   </sequence>
   <!-- closes Main sequence -->
-</process>
-<!-- closes process -->
+</process><!-- closes process -->
